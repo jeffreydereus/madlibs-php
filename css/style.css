@@ -13,25 +13,41 @@
 
 body {
     margin: 0 auto;
-    width: 50%;
-}
-
-/*
-    Set common typography.
-
-    The preferred font is Open Sans, which is a Google Web Font, so it should be available everywhere. If it isn't, Verdana is the backup font, but only for body text, because it doesn't look good in headers.
-*/
-
-body {
+    width: 40%;
+    height: 60%;
+    background-color: #333333;
     font-family: Open Sans, Verdana, sans-serif;
     font-size: 12pt;
 }
+
+nav {
+    background-color: #CF000F;
+    height: 30px;
+    color: white;
+}
+
+nav ul{
+    line-height: 30px;
+    position: relative;
+    right: 25px;
+}
+
+nav ul li{
+    display: inline-block;
+    color: white;
+}
+
+
 
 h1 {
     font-family: Open Sans Condensed, sans-serif;
     font-weight: normal;
     font-size: 24pt;
-    color: #666;
+    color: black;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+    padding-left: 15px;
 }
 
 h2 {
@@ -40,29 +56,9 @@ h2 {
     font-size: 35px;
     color: #069;
     margin-bottom: 0;
+
 }
 
-/*
-    Position the month names, day numbers, and person names.
-
-    The day numbers are on the left with a list of person names to the right of them.
-*/
-
-h1 {
-    margin: 0;
-    border-bottom: 1px dotted grey;
-}
-
-h2 {
-    margin: 0;
-}
-
-h2 ~ p {    /* only applies to p-elements on the main page */
-    margin: 0;
-    position: relative;
-    top: -40px;     /* move person names to line up with the day number */
-    left: 50px;     /* make sure the person names don't overlap the day number */
-}
 
 p:last-of-type {    /* the last p-element should act like a normal paragraph since it's not a person name */
     position: static;
@@ -73,36 +69,28 @@ p:last-of-type {    /* the last p-element should act like a normal paragraph sin
 */
 
 a {
-    color: black;
+    color: white;
     text-decoration: none;
+    margin-right: 10px;
 }
 
 a:hover {
     text-decoration: underline;
 }
 
-a + a {     /* delete links */
-    color: red;
-    font-size: 80%;
-    vertical-align: super;
+
+form {
+    background-color: white;
+    padding: 0;
+    margin: 0;
+
 }
-
-.last {  /* the add link */
-    color: blue;
-
-    display: block;     /* we can't center the parent element, because no all pages need their last paragraph centered */
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-/*
-    Set the style of forms.
-
-    Labels are in a column to the left, with input fields to the right and spanning the entire remaining width.
-*/
 
 form p {
     margin: 5px 0;
+    width: 50%;
+    height: 50%;
+    padding-left: 15px;
 }
 
 form label {
@@ -110,93 +98,46 @@ form label {
     width: 100px;
 }
 
-form input[type=submit]:only-child {
-    margin-left: 100px;     /* place submit button underneath fields */
-}
-
-.container {
-    height: auto;
-}
-
-
-.tabledata {
-    text-align: center;
-    width: 160px;
-    height: 50px;
-}
-
-.tabletr {
-    width: 29%;
-    height: auto;
-    display: inline-flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-}
-
-#formsection {
-    position: fixed;
-    top: 0;
-    left: 0;
-    display: none;
-    width: 100%;
-    height: 100%;
-}
-
-.frmbg{
-    background-color: rgba(100,100,100,0.9);
-    width: 100%;
-    height: 100%;
-}
-
-.formr{
-    width: 100%;
-}
-
-.error-message {
-    padding: 7px 10px;
-    background: #fff1f2;
-    border: #ffd5da 1px solid;
-    color: #d6001c;
-    border-radius: 4px;
-}
-.success-message {
-    padding: 7px 10px;
-    background: #cae0c4;
-    border: #c3d0b5 1px solid;
-    color: #027506;
-    border-radius: 4px;
-}
-.demo-table {
-    background: white;
-    width: 50%;
-    border-spacing: initial;
-    margin-left: 350px;
-    word-break: break-word;
-    table-layout: auto;
-    line-height: 1.8em;
-    color: #333;
-    border-radius: 4px;
-    padding: 20px 40px;
-}
-
-.demo-table td {
-    padding: 15px 0;
-}
-
-.demoInputBox {
-    padding: 10px 30px;
-    border: #a9a9a9 1px solid;
-    border-radius: 4px;
+form input {
+    position: absolute;
+    right: 35%;
+    text-align: left;
 }
 
 .btnRegister {
-    padding: 10px 20px;
-    background-color: #3367b2;
-    border: 0;
-    color: #FFF;
-    cursor: hand;
-    border-radius: 4px;
+    position: absolute;
+    bottom: 403px;
+    right: 42%;
+    text-align: left;
+}
 
+.btnRegister2 {
+    position: absolute;
+    bottom: 360px;
+    right: 42%;
+    text-align: left;
+}
+
+#First {
+    padding: 0;
+    margin: 0;
+    padding-left: 15px;
+
+}
+
+#Last{
+    padding: 0;
+    margin: 0;
+    padding-left: 15px;
+    padding-bottom: 30px;
+}
+
+div p {
+    padding-left: 15px;
+}
+
+.WhitePBG {
+    background-color: white;
 }
 
 fieldset {
